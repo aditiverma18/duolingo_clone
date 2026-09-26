@@ -32,6 +32,7 @@ app.add_middleware(
     "http://localhost:3000",
     "http://127.0.0.1:3000",
     "https://duolingo-clone-9ts2zyhpq-aditi-57bd.vercel.app",
+    "https://duolingo-clone-6w9v4olza-aditi-57bd.vercel.app",
      ],
     allow_credentials=True,
     allow_methods=["*"],
@@ -48,3 +49,4 @@ def root():
     return {
         "message": "Duolingo API is running"
     }
+
