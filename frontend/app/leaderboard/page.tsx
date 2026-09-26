@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-const API = "http://127.0.0.1:8000/api";
+const API = "https://duolingo-clone-jsi8.onrender.com/api";
 
 const seededPlayers = [
   { name: "Sofia", xp: 420 },

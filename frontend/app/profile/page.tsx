@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Mascot from "@/components/Mascot";
 
-const API = "http://127.0.0.1:8000/api";
+const API = "https://duolingo-clone-jsi8.onrender.com/api";
 
 export default function ProfilePage() {
   const [progress, setProgress] = useState<any>(null);
