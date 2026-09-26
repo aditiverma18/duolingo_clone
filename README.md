@@ -6,7 +6,7 @@ The application provides a learning path with lessons, interactive exercises, XP
 
 ## Live Demo
 
-Frontend: [Add Vercel URL]
+Frontend: https://duolingo-clone-9ts2zyhpq-aditi-57bd.vercel.app/
 
 Backend API: https://duolingo-clone-jsi8.onrender.com
 
