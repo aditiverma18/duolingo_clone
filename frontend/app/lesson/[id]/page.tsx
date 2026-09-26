@@ -464,7 +464,7 @@ export default function LessonPage() {
   if (loading) {
     return (
       <main className="duo-loading">
-        <Mascot state="thinking" size={100} />
+        <Mascot state="happy" size={100} />
         <p>Loading lesson...</p>
       </main>
     );
@@ -473,7 +473,7 @@ export default function LessonPage() {
   if (!lesson || !exercise) {
     return (
       <main className="duo-loading">
-        <Mascot state="wrong" size={100} />
+        <Mascot state="happy" size={100} />
         <p>Lesson not found.</p>
         <button className="btn btn-green" onClick={() => router.push("/")}>
           Back to home
@@ -591,7 +591,7 @@ export default function LessonPage() {
       <section className="lesson-main">
         <div key={index} className={`lesson-stage ${leaving ? "is-leaving" : ""}`}>
           <div className="lesson-mascot">
-            <Mascot state={mascotState} size={110} />
+           <Mascot state="happy" size={110} />
           </div>
 
           <h1 className="q-title">{heading}</h1>
