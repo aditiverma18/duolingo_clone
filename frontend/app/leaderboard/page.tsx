@@ -61,7 +61,7 @@ export default function LeaderboardPage() {
             <div
               key={player.name}
               className={`leaderboard-row ${
-                player.me ? "leaderboard-me" : ""
+                (player as any).me ? "leaderboard-me" : "" 
               }`}
             >
 
