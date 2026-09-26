@@ -161,8 +161,11 @@ export default function LessonPage() {
         }
 
         const progressResponse = await fetch(`${API}/me`);
-        const progressData = await progressResponse.json();
-        setHearts(progressData.hearts);
+
+if (progressResponse && progressResponse.ok) {
+  const progressData = await progressResponse.json();
+  setHearts(progressData.hearts ?? 5);
+}
       } catch (error) {
         console.error("Failed to load lesson:", error);
       } finally {
