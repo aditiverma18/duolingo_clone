@@ -2,7 +2,7 @@
 
 import Mascot from "@/components/Mascot";
 import { useEffect, useState } from "react";
-
+const API = `${process.env.NEXT_PUBLIC_API_URL}/api`;
 export default function Home() {
   const [course, setCourse] = useState<any>(null);
   const [progress, setProgress] = useState<any>(null);
@@ -11,7 +11,7 @@ export default function Home() {
   async function refillHearts() {
   try {
     const res = await fetch(
-      "http://127.0.0.1:8000/api/me/hearts/refill",
+      `${API}/me/hearts/refill`,
       {
         method: "POST",
       }
@@ -39,8 +39,8 @@ export default function Home() {
     async function loadData() {
       try {
         const [courseRes, progressRes] = await Promise.all([
-          fetch("http://127.0.0.1:8000/api/course"),
-          fetch("http://127.0.0.1:8000/api/me"),
+          fetch(`${API}/course`),,
+          fetch(`${API}/me`),
         ]);
 
         setCourse(await courseRes.json());
