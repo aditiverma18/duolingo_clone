@@ -107,3 +107,39 @@ The application follows a layered full-stack architecture:
                     ┌─────────────────────┐
                     │       SQLite        │
                     └─────────────────────┘
+
+## Database Schema
+
+The application uses **SQLite** with **SQLAlchemy ORM**.
+
+### Main Entities
+
+| Table | Purpose |
+|---|---|
+| `users` | Stores user profile and gamification data such as XP, streak, hearts, and gems |
+| `courses` | Stores available language courses |
+| `units` | Groups skills within a course |
+| `skills` | Represents individual learning skills |
+| `lessons` | Contains lessons belonging to a skill |
+| `exercises` | Stores individual lesson exercises and their types |
+| `user_progress` | Stores overall learning progress and gamification state |
+| `skill_progress` | Tracks progress for each skill |
+| `lesson_attempts` | Records completed lesson attempts |
+| `exercise_attempts` | Records individual exercise attempts |
+| `daily_activity` | Tracks daily XP and completed lessons |
+
+### Relationships
+
+```text
+Course
+  └── Units
+       └── Skills
+            └── Lessons
+                 └── Exercises
+
+User
+  ├── UserProgress
+  ├── SkillProgress
+  ├── LessonAttempts
+  ├── ExerciseAttempts
+  └── DailyActivity
