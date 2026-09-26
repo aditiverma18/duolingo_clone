@@ -25,8 +25,7 @@ import {
   type ReactNode,
 } from "react";
 
-const API = `${process.env.NEXT_PUBLIC_API_URL}/api`;
-
+const API = "https://duolingo-clone-jsi8.onrender.com/api";
 /* =========================================================
    TYPES (mirror the backend response schemas)
    ========================================================= */
