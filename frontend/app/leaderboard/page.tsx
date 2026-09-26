@@ -72,13 +72,13 @@ export default function LeaderboardPage() {
               </div>
 
               <div className="leaderboard-avatar">
-                {player.me ? "🦉" : "🙂"}
+                {(player as any).me ? "🦉" : "🙂"}
               </div>
 
               <div className="leaderboard-name">
                 <strong>
                   {player.name}
-                  {player.me && " (You)"}
+                  {(player as any).me && " (You)"}
                 </strong>
               </div>
 
